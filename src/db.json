@@ -1,0 +1,152 @@
+{
+  "stores": [
+    {
+      "id": 1,
+      "name": "Магазин одежды"
+    },
+    {
+      "id": 2,
+      "name": "Магазин электроники"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "store_id": 1,
+      "email": "owner@clothes.com"
+    },
+    {
+      "id": 2,
+      "store_id": 2,
+      "email": "owner@tech.com"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "store_id": 1,
+      "name": "Пижама шелковая, женская",
+      "price": 49.99,
+      "images": ["/images/pajama1.jpg"],
+      "attributes": {
+        "color": "розовый",
+        "sizes": ["S", "M", "L"],
+        "material": "silk",
+        "category": "pajamas"
+      }
+    },
+    {
+      "id": 2,
+      "store_id": 1,
+      "name": "Пижама хлопковая, мужская",
+      "price": 39.99,
+      "images": ["/images/pajama2.jpg"],
+      "attributes": {
+        "color": "синий",
+        "sizes": ["M", "L", "XL"],
+        "material": "cotton",
+        "category": "pajamas"
+      }
+    },
+    {
+      "id": 3,
+      "store_id": 1,
+      "name": "Пижама флисовая, детская",
+      "price": 29.99,
+      "images": ["/images/pajama3.jpg"],
+      "attributes": {
+        "color": "желтый",
+        "sizes": ["XS", "S", "M"],
+        "material": "fleece",
+        "category": "pajamas"
+      }
+    },
+    {
+      "id": 4,
+      "store_id": 1,
+      "name": "Комплект нижнего белья кружевной, женский",
+      "price": 34.99,
+      "images": ["/images/lingerie1.jpg"],
+      "attributes": {
+        "color": "красный",
+        "sizes": ["S", "M"],
+        "material": "lace",
+        "category": "lingerie"
+      }
+    },
+    {
+      "id": 5,
+      "store_id": 1,
+      "name": "Комплект белья хлопковый, мужской",
+      "price": 29.99,
+      "images": ["/images/lingerie2.jpg"],
+      "attributes": {
+        "color": "черный",
+        "sizes": ["M", "L", "XL"],
+        "material": "cotton",
+        "category": "lingerie"
+      }
+    },
+    {
+      "id": 6,
+      "store_id": 1,
+      "name": "Комплект белья детский",
+      "price": 19.99,
+      "images": ["/images/lingerie3.jpg"],
+      "attributes": {
+        "color": "белый",
+        "sizes": ["XS", "S", "M"],
+        "material": "cotton",
+        "category": "lingerie"
+      }
+    },
+    {
+      "id": 7,
+      "store_id": 2,
+      "name": "iPhone 14",
+      "price": 900,
+      "attributes": {
+        "memory": "128GB",
+        "color": "black"
+      }
+    },
+    {
+      "id": 8,
+      "store_id": 2,
+      "name": "Ноутбук",
+      "price": 1200,
+      "attributes": {
+        "ram": "16GB",
+        "cpu": "i7"
+      }
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "store_id": 1,
+      "user_email": "client@gmail.com",
+      "status": "new"
+    },
+    {
+      "id": 2,
+      "store_id": 2,
+      "user_email": "user@yahoo.com",
+      "status": "shipped"
+    }
+  ],
+  "order_items": [
+    {
+      "id": 1,
+      "order_id": 1,
+      "product_id": 1,
+      "quantity": 2
+    },
+    {
+      "id": 2,
+      "order_id": 2,
+      "product_id": 7,
+      "quantity": 1
+    }
+  ]
+}
