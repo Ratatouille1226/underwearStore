@@ -53,12 +53,35 @@
 }
 
 .quantity button {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
+
   border: none;
+  border-radius: 8px;
+
   background: #f0f0f0;
-  border-radius: 6px;
+  color: black;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* hover */
+.quantity button:hover {
+  background: black;
+  color: white;
+}
+
+/* active (важно для мобилки) */
+.quantity button:active {
+  transform: scale(0.9);
 }
 
 .total {
@@ -104,17 +127,115 @@
 }
 
 .checkoutBtn {
+  display: flex; /* важно */
+  align-items: center;
+  justify-content: center;
+
   margin-top: 15px;
   width: 100%;
-  padding: 10px 0;
-  border: none;
+  padding: 12px;
+
+  text-decoration: none; /* убрать underline */
+  border-radius: 10px;
+
   background: black;
   color: white;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
+
+  font-weight: 500;
+  font-size: 14px;
+
+  transition: all 0.3s ease;
 }
 
+/* hover */
 .checkoutBtn:hover {
   background: #222;
+  transform: translateY(-2px);
+}
+
+/* active (очень важно для мобилки) */
+.checkoutBtn:active {
+  transform: scale(0.98);
+}
+
+
+/* 📱 МОБИЛКА */
+@media (max-width: 768px) {
+  .cartPage {
+    padding: 15px;
+  }
+
+  .cartPage h1 {
+    font-size: 22px;
+  }
+
+  .cartContent {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* карточка товара */
+  .item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .item img {
+    width: 100%;
+    max-width: 260px; /* ВАЖНО */
+    height: 180px;
+    object-fit: cover;
+
+    border-radius: 12px;
+  }
+
+  .info {
+    width: 100%;
+  }
+
+  .info h3 {
+    font-size: 14px;
+  }
+
+  /* количество */
+  .quantity {
+    margin-top: 5px;
+     justify-content: center;
+  }
+
+  /* цена */
+  .total {
+    margin-left: 0;
+    font-size: 16px;
+  }
+
+  /* кнопка удаления */
+  .remove {
+    position: static;
+    align-self: flex-end;
+    font-size: 16px;
+  }
+
+  /* summary вниз */
+  .summary {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .summary h2 {
+    font-size: 16px;
+  }
+
+  .totalAmount {
+    font-size: 16px;
+  }
+
+  /* кнопка как sticky */
+  .checkoutBtn {
+    font-size: 16px;
+    padding: 14px;
+    position: sticky;
+    bottom: 10px;
+  }
 }

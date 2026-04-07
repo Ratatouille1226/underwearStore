@@ -70,3 +70,20 @@
 .group select:active {
   transform: scale(0.98);
 }
+
+@media (max-width: 560px) {
+    .filters {
+    flex-direction: column; /* фильтры идут вертикально */
+    gap: 15px; /* уменьшаем отступы между группами */
+    padding: 15px; /* чуть меньше паддингов */
+  }
+
+  .group {
+    width: 100%; /* каждая группа занимает всю ширину */
+    min-width: auto; /* убираем минимальную ширину */
+  }
+
+  .group select {
+    width: 100%; /* селект растягивается на всю ширину */
+  }
+}

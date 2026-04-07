@@ -1,0 +1,122 @@
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* layout */
+.container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* КАРТИНКА */
+.imageWrapper {
+  flex: 1;
+}
+
+.imageWrapper img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+/* ИНФА */
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.info h1 {
+  font-size: 28px;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.desc {
+  color: #555;
+  line-height: 1.5;
+}
+
+/* РАЗМЕРЫ */
+.sizes span {
+  font-size: 14px;
+  color: #777;
+}
+
+.sizeList {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.sizeList button {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sizeList button:hover {
+  border-color: black;
+}
+
+/* КНОПКА */
+.addBtn {
+  margin-top: 10px;
+  padding: 14px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: black;
+  color: white;
+
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.addBtn:hover {
+  background: #222;
+  transform: translateY(-2px);
+}
+
+.addBtn:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imageWrapper img {
+    max-width: 100%;
+  }
+
+  .info {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .sizeList {
+    justify-content: center;
+  }
+
+  .addBtn {
+    width: 100%;
+  }
+}

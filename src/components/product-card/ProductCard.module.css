@@ -1,7 +1,17 @@
 .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* главное: кнопка и инфо выравниваются */
   cursor: pointer;
   transition: all 0.3s ease;
-  position: relative;
+}
+
+.linkWrapper {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  flex: 1; /* чтобы занимала всю доступную высоту */
 }
 
 .imageWrapper {
@@ -27,7 +37,7 @@
 /* Кнопка добавления в корзину */
 .addToCart {
   position: absolute;
-  bottom: 10px;
+  bottom: 35px;
   right: 10px;
 
   background: black;
@@ -59,7 +69,7 @@
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; /* теперь цена ровно по середине */
 }
 
 .info h3 {

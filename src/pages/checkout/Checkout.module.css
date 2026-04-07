@@ -1,0 +1,180 @@
+.checkout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.checkout h1 {
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+/* layout */
+.container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* ФОРМА */
+.form {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+
+.form h2 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+/* инпуты */
+.form input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+
+  background: #fafafa;
+
+  transition: 0.2s;
+}
+
+.form input:focus {
+  outline: none;
+  border-color: black;
+  background: white;
+}
+
+/* 2 поля в ряд */
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+/* SUMMARY */
+.summary {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+
+  height: fit-content;
+
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+
+.summary h2 {
+  margin-bottom: 15px;
+}
+
+/* строки */
+.item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 15px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* кнопка */
+.payBtn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: black;
+  color: white;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.payBtn:hover {
+  background: #222;
+  transform: translateY(-2px);
+}
+
+/* 📱 МОБИЛКА */
+@media (max-width: 768px) {
+  .checkout {
+    padding: 15px;
+  }
+
+  .checkout h1 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* форма */
+  .form {
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .form h2 {
+    font-size: 14px;
+  }
+
+  .form input {
+    padding: 14px; /* больше для тача */
+    font-size: 14px;
+  }
+
+  /* поля в колонку */
+  .row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* summary */
+  .summary {
+    padding: 16px;
+  }
+
+  .summary h2 {
+    font-size: 16px;
+  }
+
+  .item {
+    font-size: 14px;
+  }
+
+  .total {
+    font-size: 16px;
+  }
+
+  /* кнопка — главный элемент */
+  .payBtn {
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 12px;
+
+    /* фиксируем кнопку снизу (ВАУ UX) */
+    position: sticky;
+    bottom: 10px;
+  }
+}

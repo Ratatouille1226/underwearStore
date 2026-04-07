@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./Cart.module.css";
 
 export const Cart = () => {
@@ -33,7 +34,9 @@ export const Cart = () => {
           <p>Товары: 49.99 €</p>
           <p>Доставка: 5 €</p>
           <p className={styles.totalAmount}>Итого: 54.99 €</p>
-          <button className={styles.checkoutBtn}>Оформить заказ</button>
+          <Link to="/checkout" className={styles.checkoutBtn}>
+            Оформить заказ
+          </Link>
         </div>
       </div>
     </div>
