@@ -37,7 +37,7 @@
 /* Кнопка добавления в корзину */
 .addToCart {
   position: absolute;
-  bottom: 35px;
+  bottom: 55px;
   right: 10px;
 
   background: black;
@@ -91,5 +91,6 @@
   .addToCart {
     opacity: 1; /* всегда видна на мобильных */
     transform: none;
+    bottom: 35px;
   }
 }

@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
 import styles from "./ProductCard.module.css";
+import type { Product } from "../../types";
 
-export const ProductCard = () => {
+interface Props {
+  product: Product;
+}
+
+export const ProductCard = ({ product }: Props) => {
   return (
     <div className={styles.card}>
       {/* Обертка для клика по карточке */}
@@ -14,8 +19,8 @@ export const ProductCard = () => {
         </div>
 
         <div className={styles.info}>
-          <h3>Шелковая пижама</h3>
-          <p>49.99 €</p>
+          <h3>{product.name}</h3>
+          <p>{product.price} €</p>
         </div>
       </Link>
 
