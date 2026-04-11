@@ -10,7 +10,7 @@ export const ProductCard = ({ product }: Props) => {
   return (
     <div className={styles.card}>
       {/* Обертка для клика по карточке */}
-      <Link to="/product" className={styles.linkWrapper}>
+      <Link to={`/products/${product.id}`} className={styles.linkWrapper}>
         <div className={styles.imageWrapper}>
           <img
             src="https://avatars.mds.yandex.net/i?id=5dbc75cc67dfa9ade0e1710efc639026_l-4076029-images-thumbs&n=13"

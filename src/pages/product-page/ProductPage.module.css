@@ -96,6 +96,39 @@
   transform: scale(0.98);
 }
 
+.attributes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  margin-top: 10px;
+}
+
+/* строка атрибута */
+.attributeItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 14px;
+
+  background: #f9f9f9;
+  border-radius: 10px;
+
+  font-size: 14px;
+}
+
+/* название */
+.attrName {
+  color: #777;
+}
+
+/* значение */
+.attrValue {
+  font-weight: 500;
+  color: #222;
+}
+
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
