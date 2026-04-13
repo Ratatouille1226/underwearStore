@@ -71,7 +71,7 @@
       "store_id": 1,
       "name": "Пижама шелковая, женская",
       "price": 49.99,
-      "category": "pajamas",
+      "category": "Пижамы",
       "images": ["/images/pajama1.jpg"],
       "attributes": {
         "color": "розовый",
@@ -84,7 +84,7 @@
       "store_id": 1,
       "name": "Пижама хлопковая, мужская",
       "price": 39.99,
-      "category": "pajamas",
+      "category": "Пижамы",
       "images": ["/images/pajama2.jpg"],
       "attributes": {
         "color": "синий",
@@ -97,7 +97,7 @@
       "store_id": 1,
       "name": "Пижама флисовая, детская",
       "price": 29.99,
-      "category": "pajamas",
+      "category": "Пижамы",
       "images": ["/images/pajama3.jpg"],
       "attributes": {
         "color": "желтый",
@@ -110,7 +110,7 @@
       "store_id": 1,
       "name": "Комплект белья кружевной",
       "price": 34.99,
-      "category": "lingerie",
+      "category": "Нижнее бельё",
       "images": ["/images/lingerie1.jpg"],
       "attributes": {
         "color": "красный",
@@ -123,7 +123,7 @@
       "store_id": 1,
       "name": "Комплект белья хлопковый",
       "price": 29.99,
-      "category": "lingerie",
+      "category": "Нижнее бельё",
       "images": ["/images/lingerie2.jpg"],
       "attributes": {
         "color": "черный",
@@ -136,7 +136,7 @@
       "store_id": 1,
       "name": "Комплект белья детский",
       "price": 19.99,
-      "category": "lingerie",
+      "category": "Нижнее бельё",
       "images": ["/images/lingerie3.jpg"],
       "attributes": {
         "color": "белый",
@@ -166,6 +166,32 @@
       "attributes": {
         "ram": "16GB",
         "cpu": "i7"
+      }
+    },
+        {
+      "id": 9,
+      "store_id": 1,
+      "name": "Нижнее бельё",
+      "price": 10.99,
+      "category": "Нижнее бельё",
+      "images": ["/images/lingerie3.jpg"],
+      "attributes": {
+        "color": "зеленый",
+        "sizes": ["XS", "S", "M"],
+        "material": "cotton"
+      }
+    },
+        {
+      "id": 10,
+      "store_id": 1,
+      "name": "Нижнее бельё",
+      "price": 15.99,
+      "category": "Нижнее бельё",
+      "images": ["/images/lingerie3.jpg"],
+      "attributes": {
+        "color": "фиолетовый",
+        "sizes": ["XS", "S", "M"],
+        "material": "cotton"
       }
     }
   ],
