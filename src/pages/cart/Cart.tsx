@@ -1,7 +1,21 @@
 import { Link } from "react-router-dom";
 import styles from "./Cart.module.css";
+import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
+import {
+  removeFromCart,
+  decreaseQuantity,
+  increaseQuantity,
+} from "../../features/cart/cartSlice";
 
 export const Cart = () => {
+  const dispatch = useAppDispatch();
+  const items = useAppSelector((state) => state.cart.items);
+
+  const totalPrice = items.reduce(
+    (cur, item) => cur + item.price * item.quantity,
+    0,
+  );
+
   return (
     <div className={styles.cartPage}>
       <h1>Ваша корзина</h1>
@@ -9,31 +23,43 @@ export const Cart = () => {
       <div className={styles.cartContent}>
         {/* Лист товаров */}
         <div className={styles.items}>
-          <div className={styles.item}>
-            <img
-              src="https://avatars.mds.yandex.net/i?id=5dbc75cc67dfa9ade0e1710efc639026_l-4076029-images-thumbs&n=13"
-              alt="product"
-            />
-            <div className={styles.info}>
-              <h3>Шелковая пижама</h3>
-              <p>Цена: 49.99 €</p>
-              <div className={styles.quantity}>
-                <button>-</button>
-                <span>1</span>
-                <button>+</button>
+          {items.map((item) => (
+            <div key={item.id} className={styles.item}>
+              <img
+                src="https://avatars.mds.yandex.net/i?id=5dbc75cc67dfa9ade0e1710efc639026_l-4076029-images-thumbs&n=13"
+                alt="product"
+              />
+              <div className={styles.info}>
+                <h3>{item.name}</h3>
+                <div className={styles.quantity}>
+                  <button onClick={() => dispatch(decreaseQuantity(item.id))}>
+                    -
+                  </button>
+                  <span>{item.quantity}</span>
+                  <button onClick={() => dispatch(increaseQuantity(item.id))}>
+                    +
+                  </button>
+                </div>
               </div>
+              <p className={styles.total}>
+                {(item.price * item.quantity).toFixed(2)} $
+              </p>
+              <button
+                className={styles.remove}
+                onClick={() => dispatch(removeFromCart(item.id))}
+              >
+                ✕
+              </button>
             </div>
-            <p className={styles.total}>49.99 €</p>
-            <button className={styles.remove}>✕</button>
-          </div>
+          ))}
         </div>
 
         {/* Блок заказа */}
         <div className={styles.summary}>
           <h2>Итого</h2>
-          <p>Товары: 49.99 €</p>
-          <p>Доставка: 5 €</p>
-          <p className={styles.totalAmount}>Итого: 54.99 €</p>
+          <p>Товары: {totalPrice.toFixed(2)} $</p>
+          {/* <p>Доставка: 5 €</p> */}
+          <p className={styles.totalAmount}>Итого: {totalPrice.toFixed(2)} $</p>
           <Link to="/checkout" className={styles.checkoutBtn}>
             Оформить заказ
           </Link>

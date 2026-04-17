@@ -1,12 +1,16 @@
 import { Link } from "react-router-dom";
 import styles from "./ProductCard.module.css";
 import type { Product } from "../../types";
+import { useAppDispatch } from "../../hooks/hooks";
+import { addToCart } from "../../features/cart/cartSlice";
 
 interface Props {
   product: Product;
 }
 
 export const ProductCard = ({ product }: Props) => {
+  const dispatch = useAppDispatch();
+
   return (
     <div className={styles.card}>
       {/* Обертка для клика по карточке */}
@@ -25,7 +29,10 @@ export const ProductCard = ({ product }: Props) => {
       </Link>
 
       {/* Кнопка добавления в корзину отдельно */}
-      <button className={styles.addToCart}>
+      <button
+        className={styles.addToCart}
+        onClick={() => dispatch(addToCart(product))}
+      >
         <i className="fa-solid fa-basket-shopping"></i>
       </button>
     </div>

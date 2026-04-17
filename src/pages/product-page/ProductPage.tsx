@@ -3,6 +3,7 @@ import { useAppSelector, useAppDispatch } from "../../hooks/hooks";
 import { fetchProducts } from "../../features/products/productsSlice";
 import styles from "./ProductPage.module.css";
 import { useEffect } from "react";
+import { addToCart } from "../../features/cart/cartSlice";
 
 const attributeLabels: Record<string, string> = {
   color: "Цвет",
@@ -63,7 +64,12 @@ export const ProductPage = () => {
           </div>
 
           {/* Кнопка */}
-          <button className={styles.addBtn}>Добавить в корзину</button>
+          <button
+            className={styles.addBtn}
+            onClick={() => dispatch(addToCart(product))}
+          >
+            Добавить в корзину
+          </button>
         </div>
       </div>
     </div>
