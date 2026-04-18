@@ -1,28 +1,26 @@
 {
   "stores": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Магазин одежды"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Магазин электроники"
     }
   ],
-
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "store_id": 1,
       "email": "owner@clothes.com"
     },
     {
-      "id": 2,
+      "id": "2",
       "store_id": 2,
       "email": "owner@tech.com"
     }
   ],
-
   "store_settings": [
     {
       "store_id": 1,
@@ -30,19 +28,34 @@
         {
           "name": "color",
           "type": "select",
-          "options": ["розовый", "синий", "черный", "белый"]
+          "options": [
+            "розовый",
+            "синий",
+            "черный",
+            "белый"
+          ]
         },
         {
           "name": "sizes",
           "type": "multiselect",
-          "options": ["XS", "S", "M", "L", "XL"]
+          "options": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ]
         },
         {
           "name": "material",
           "type": "text"
         }
       ],
-      "categories": ["pajamas", "lingerie"]
+      "categories": [
+        "pajamas",
+        "lingerie"
+      ],
+      "id": "94de"
     },
     {
       "store_id": 2,
@@ -58,161 +71,265 @@
         {
           "name": "memory",
           "type": "select",
-          "options": ["128GB", "256GB", "512GB"]
+          "options": [
+            "128GB",
+            "256GB",
+            "512GB"
+          ]
         }
       ],
-      "categories": ["phones", "laptops"]
+      "categories": [
+        "phones",
+        "laptops"
+      ],
+      "id": "8948"
     }
   ],
-
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "store_id": 1,
       "name": "Пижама шелковая, женская",
       "price": 49.99,
       "category": "Пижамы",
-      "images": ["/images/pajama1.jpg"],
+      "images": [
+        "/images/pajama1.jpg"
+      ],
       "attributes": {
         "color": "розовый",
-        "sizes": ["S", "M", "L"],
+        "sizes": [
+          "S",
+          "M",
+          "L"
+        ],
         "material": "silk"
       }
     },
     {
-      "id": 2,
+      "id": "2",
       "store_id": 1,
       "name": "Пижама хлопковая, мужская",
       "price": 39.99,
       "category": "Пижамы",
-      "images": ["/images/pajama2.jpg"],
+      "images": [
+        "/images/pajama2.jpg"
+      ],
       "attributes": {
         "color": "синий",
-        "sizes": ["M", "L", "XL"],
+        "sizes": [
+          "M",
+          "L",
+          "XL"
+        ],
         "material": "cotton"
       }
     },
     {
-      "id": 3,
+      "id": "3",
       "store_id": 1,
       "name": "Пижама флисовая, детская",
       "price": 29.99,
       "category": "Пижамы",
-      "images": ["/images/pajama3.jpg"],
+      "images": [
+        "/images/pajama3.jpg"
+      ],
       "attributes": {
         "color": "желтый",
-        "sizes": ["XS", "S", "M"],
+        "sizes": [
+          "XS",
+          "S",
+          "M"
+        ],
         "material": "Флисовая"
       }
     },
     {
-      "id": 4,
+      "id": "4",
       "store_id": 1,
       "name": "Комплект белья кружевной",
       "price": 34.99,
       "category": "Нижнее бельё",
-      "images": ["/images/lingerie1.jpg"],
+      "images": [
+        "/images/lingerie1.jpg"
+      ],
       "attributes": {
         "color": "красный",
-        "sizes": ["S", "M"],
+        "sizes": [
+          "S",
+          "M"
+        ],
         "material": "lace"
       }
     },
     {
-      "id": 5,
+      "id": "5",
       "store_id": 1,
       "name": "Комплект белья хлопковый",
       "price": 29.99,
       "category": "Нижнее бельё",
-      "images": ["/images/lingerie2.jpg"],
+      "images": [
+        "/images/lingerie2.jpg"
+      ],
       "attributes": {
         "color": "черный",
-        "sizes": ["M", "L", "XL"],
+        "sizes": [
+          "M",
+          "L",
+          "XL"
+        ],
         "material": "cotton"
       }
     },
     {
-      "id": 6,
+      "id": "6",
       "store_id": 1,
       "name": "Комплект белья детский",
       "price": 19.99,
       "category": "Нижнее бельё",
-      "images": ["/images/lingerie3.jpg"],
+      "images": [
+        "/images/lingerie3.jpg"
+      ],
       "attributes": {
         "color": "белый",
-        "sizes": ["XS", "S", "M"],
+        "sizes": [
+          "XS",
+          "S",
+          "M"
+        ],
         "material": "cotton"
       }
     },
     {
-      "id": 7,
+      "id": "7",
       "store_id": 2,
       "name": "iPhone 14",
       "price": 900,
       "category": "phones",
-      "images": ["/images/iphone.jpg"],
+      "images": [
+        "/images/iphone.jpg"
+      ],
       "attributes": {
         "memory": "128GB",
         "color": "black"
       }
     },
     {
-      "id": 8,
+      "id": "8",
       "store_id": 2,
       "name": "Ноутбук",
       "price": 1200,
       "category": "laptops",
-      "images": ["/images/laptop.jpg"],
+      "images": [
+        "/images/laptop.jpg"
+      ],
       "attributes": {
         "ram": "16GB",
         "cpu": "i7"
       }
     },
-        {
-      "id": 9,
+    {
+      "id": "9",
       "store_id": 1,
       "name": "Нижнее бельё",
       "price": 10.99,
       "category": "Нижнее бельё",
-      "images": ["/images/lingerie3.jpg"],
+      "images": [
+        "/images/lingerie3.jpg"
+      ],
       "attributes": {
         "color": "зеленый",
-        "sizes": ["XS", "S", "M"],
+        "sizes": [
+          "XS",
+          "S",
+          "M"
+        ],
         "material": "cotton"
       }
     },
-        {
-      "id": 10,
+    {
+      "id": "10",
       "store_id": 1,
       "name": "Нижнее бельё",
       "price": 15.99,
       "category": "Нижнее бельё",
-      "images": ["/images/lingerie3.jpg"],
+      "images": [
+        "/images/lingerie3.jpg"
+      ],
       "attributes": {
         "color": "фиолетовый",
-        "sizes": ["XS", "S", "M"],
+        "sizes": [
+          "XS",
+          "S",
+          "M"
+        ],
         "material": "cotton"
       }
     }
   ],
-
   "orders": [
     {
-      "id": 1,
+      "id": "a176",
       "store_id": 1,
-      "user_email": "client@gmail.com",
-      "status": "new"
+      "user_email": "kotlyar.andrey03@mail.ru",
+      "status": "new",
+      "customer_name": "React, TypeScript, Node Js, sass",
+      "phone": "kotlyar.andrey03@mail.ru",
+      "city": "dfsfsdf",
+      "address": "212dsad",
+      "zip": "asdasd"
+    },
+    {
+      "id": "0cfa",
+      "store_id": 1,
+      "user_email": "kotlyar.andrey03@mail.ru",
+      "status": "new",
+      "customer_name": "React, TypeScript, Node Js, sass",
+      "phone": "+79045011966",
+      "city": "dfsfsdf",
+      "address": "212dsad",
+      "zip": "asdasd"
     }
   ],
-
   "order_items": [
     {
-      "id": 1,
-      "order_id": 1,
-      "product_id": 1,
+      "id": "bcfa",
+      "order_id": "a176",
+      "product_id": "4",
+      "store_id": 1,
+      "quantity": 1,
+      "price": 34.99
+    },
+    {
+      "id": "dfd6",
+      "order_id": "a176",
+      "product_id": "2",
+      "store_id": 1,
+      "quantity": 1,
+      "price": 39.99
+    },
+    {
+      "id": "b987",
+      "order_id": "a176",
+      "product_id": "9",
       "store_id": 1,
       "quantity": 2,
-      "price": 49.99
+      "price": 10.99
+    },
+    {
+      "id": "e7e7",
+      "order_id": "a176",
+      "product_id": "3",
+      "store_id": 1,
+      "quantity": 1,
+      "price": 29.99
+    },
+    {
+      "id": "7522",
+      "order_id": "0cfa",
+      "product_id": "5",
+      "store_id": 1,
+      "quantity": 1,
+      "price": 29.99
     }
   ]
 }

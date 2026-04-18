@@ -12,7 +12,7 @@ export const Cart = () => {
   const items = useAppSelector((state) => state.cart.items);
 
   const totalPrice = items.reduce(
-    (cur, item) => cur + item.price * item.quantity,
+    (cur, item) => cur + item.product.price * item.quantity,
     0,
   );
 
@@ -20,33 +20,39 @@ export const Cart = () => {
     <div className={styles.cartPage}>
       <h1>Ваша корзина</h1>
 
+      {items.length === 0 ? <span>Корзина пустует...</span> : null}
+
       <div className={styles.cartContent}>
         {/* Лист товаров */}
         <div className={styles.items}>
           {items.map((item) => (
-            <div key={item.id} className={styles.item}>
+            <div key={item.product.id} className={styles.item}>
               <img
                 src="https://avatars.mds.yandex.net/i?id=5dbc75cc67dfa9ade0e1710efc639026_l-4076029-images-thumbs&n=13"
                 alt="product"
               />
               <div className={styles.info}>
-                <h3>{item.name}</h3>
+                <h3>{item.product.name}</h3>
                 <div className={styles.quantity}>
-                  <button onClick={() => dispatch(decreaseQuantity(item.id))}>
+                  <button
+                    onClick={() => dispatch(decreaseQuantity(item.product.id))}
+                  >
                     -
                   </button>
                   <span>{item.quantity}</span>
-                  <button onClick={() => dispatch(increaseQuantity(item.id))}>
+                  <button
+                    onClick={() => dispatch(increaseQuantity(item.product.id))}
+                  >
                     +
                   </button>
                 </div>
               </div>
               <p className={styles.total}>
-                {(item.price * item.quantity).toFixed(2)} $
+                {(item.product.price * item.quantity).toFixed(2)} $
               </p>
               <button
                 className={styles.remove}
-                onClick={() => dispatch(removeFromCart(item.id))}
+                onClick={() => dispatch(removeFromCart(item.product.id))}
               >
                 ✕
               </button>
